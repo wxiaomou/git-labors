@@ -1,0 +1,60 @@
+.nav-frame {
+  width: 100%;
+  height: 100%;
+  .content-container {
+    height: 100%;
+    transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+    -webkit-transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+        //slide the content when show menu
+    &.menuOpenClass {
+      -webkit-transform: translateX(320px);
+      transform: translateX(320px);
+      transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+      -webkit-transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+      .cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0,0,0,0.65);
+        transition: background-color 0.5s ease;
+      }
+    }
+  }
+  .menu-nav-bar {
+    position: absolute;
+    top: 190px;
+    left: 25px;
+    @media only screen and (max-width: 576px) {
+      font-size: 14px;
+      top: 174px;
+    }
+    .nav-bars {
+      color: rgba(255, 255, 255, 0.8);
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+      }
+    }
+    .menu-title-link {
+      .menu-title {
+        font-size: 36px;
+        padding: 10px;
+        width: 300px;
+        margin: auto;
+        list-style: none;
+        color: rgba(0, 0, 0, 0.8);
+        text-decoration: none;
+        &.selected {
+          text-decoration: underline;
+        }
+        &:hover {
+          color: rgba(0, 0, 0, 1);
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.sliderBlock {
+  position: absolute;
+  color: white;
+  background: rgba(0, 0, 0, .5);
+  min-height: 20vmin;
+  a {
+    color: white;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    background: rgba(0, 0, 0, .6);
+    cursor: pointer;
+  }
+  .blockHeaders {
+    padding: 4vmin;
+    .blockHeader {
+      text-align: center;
+      font-size: 4vmin;
+      @media only screen and (min-width: 576px) and (min-height: 400px){
+        font-size: 28px;
+      }
+    }
+  }
+
+  .blockContent {
+    padding-left: 8%;
+    padding-right: 7%;
+    padding-bottom: 20px;
+    font-size: 3vmin;
+    @media only screen and (min-width: 576px) and (min-height: 400px) {
+      font-size: 16px;
+    }
+    @media only screen and (min-width: 768px) and (min-height: 400px) {
+      font-size: 20px;
+    }
+  }
+  .blockOutsideTitle {
+    position: relative;
+    left: -56px;
+    top: -4vmin;
+    font-size: 5vmin;
+    min-width: 200px;
+    @media only screen and (min-width: 576px) and (min-height: 400px) {
+      font-size: 26px;
+      top: -19px;
+    }
+    @media only screen and (min-width: 768px) and (min-height: 400px) {
+      font-size: 32px;
+      top: -19px;
+    }
+  }
+  .blockInsideTitle {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 4vmin;
+    padding-bottom: 6px;
+  }
+  .blockInsideTitleAndTitleOnly {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 6vmin;
+    padding-bottom: 6vmin;
+    @media only screen and (min-width: 576px) and (min-height: 400px) {
+      font-size: 26px;
+    }
+    @media only screen and (min-width: 768px) and (min-height: 400px) {
+      font-size: 32px;
+    }
+    .titleIcon {
+      width: 16px;
+      margin-right: 10px;
+      @media only screen and (min-width: 576px) and (min-height: 400px) {
+        width: 26px;
+      }
+      @media only screen and (min-width: 768px) and (min-height: 400px) {
+        width: 32px;
+      }
+    }
+  }
+}

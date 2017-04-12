@@ -1,0 +1,43 @@
+.post {
+  //overwrite header-menu
+  *{
+    font-family: 'Noto Sans SC', PingFangSC-Light, sans-serif, "Microsoft YaHei", "微软雅黑" !important;
+  }
+  .header-menu {
+    .subtitles {
+      padding-right: 10%;
+    }
+  }
+  .title {
+    font-size: 48px;
+    @media only screen and (max-width: 576px) {
+      font-size: 24px;
+    }
+    font-weight: 600;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+  }
+  .content {
+    img {
+      height: auto;
+      max-width: 100%;
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+      &.aligncenter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &.alignleft {
+        float: left;
+      }
+      &.alignright {
+        float: right;
+      }
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+  }
+}

@@ -1,0 +1,88 @@
+.blogMainPage {
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .shuffle-container {
+      position: relative;
+      padding-left: 4%;
+    }
+    .filterContainer {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .filterLabel {
+        padding-right: 20px;
+        font-weight: 500;
+        color: #01b3c8;
+      }
+      .btn{
+        padding-top: 20px;
+        padding-left: 5%;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 5px;
+        font-weight: 700;
+        background: white;
+        color: #01b3c8;
+        border: 1px solid #01b3c8;
+        padding: 0.5em 0.5em;
+        min-width:40px;
+        cursor: pointer;
+        line-height: 1;
+        border-radius: 2px;
+        &:hover,
+        &.selected {
+            color: white;
+            background: #01b3c8;
+        }
+      }
+    }
+    .tile {
+      display: block;
+      float: left;
+      min-height: 500px;
+      width: 30%;
+      margin: 1.5%;
+      background-color: #f7f7f7;
+      @media only screen and (max-width: 768px) {
+        width: 98%;
+      }
+      @media only screen and (min-width: 769px) and (max-width: 1240px) {
+        width: 46%;
+      }
+      .image-top {
+        height: 200px;
+        background-size: cover;
+        width: 100%;
+        background-position: center;
+      }
+      .image-full {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.3;
+      }
+      .post-title {
+        text-align: center;
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: 500;
+      }
+      .post-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        font-weight: 300;
+      }
+      .read-more {
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+}

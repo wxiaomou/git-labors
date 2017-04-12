@@ -1,0 +1,372 @@
+.slider-container{
+  width: 100%;
+  height: 100%;
+  .slider {
+    width: 100%;
+    height: 100%;
+    transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+    -webkit-transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+
+    //slide the content when show menu
+    &.menuOpenClass {
+      -webkit-transform: translateX(320px);
+      transform: translateX(320px);
+      transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+      -webkit-transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+      .cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0,0,0,0.65);
+        transition: background-color 0.5s ease;
+      }
+    }
+    .deck {
+      width: 100%;
+      height: 100%;
+    }
+    .slider {
+      width: 100%;
+      height: 100%;
+    }
+
+    .deck-slide {
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+
+    .nav-bars {
+      position: absolute;
+      top: 45%;
+      left: 25px;
+      color: rgba(255, 255, 255, 0.8);
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+      }
+    }
+
+    /*
+      slide-0
+    */
+    .slide-0 {
+      background-image: url("../images/slide-0.jpeg");
+      background-position: 50% 100%;
+      .titleAndSubtitle {
+        position: absolute;;
+        transition: all 1s linear;;
+        padding-left: 12%;
+        padding-top: 17vmin;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          position: relative;
+          float: right;
+          padding-right: 30px;
+        }
+        // for iphone 5 in portrait
+        @media only screen and (max-height: 320px) {
+          padding-top: 10vmin;
+        }
+        .titleBlock {
+          .title:first-child {
+            text-align: left;
+          }
+        }
+      }
+      [value~=block-0] {
+        top: 60%;
+        left: 20%;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          top: 70%;
+          right: 10%;
+        }
+      }
+      [value~=block-1] {
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        top: 35%;
+        right: 10%;
+        @media only screen and (max-width: 576px) {
+          left: 20%;
+        }
+      }
+    }
+
+    /*
+      slide-1
+    */
+    .slide-1 {
+      background-image: url("../images/slide-1.jpeg");
+      .titleAndSubtitle {
+        float: right;
+        padding-right: 6vmin;
+        padding-top: 12vmin;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          padding-top: 25vmin;
+          padding-right: 3vmin;
+        }
+        // for iphone 5 in portrait
+        @media only screen and (max-height: 320px) {
+          padding-top: 10vmin;
+        }
+        @media only screen and (min-width: 768px) {
+          padding-top: 8vmin;
+        }
+        .titleBlock {
+          .title:first-child {
+            text-align: left;
+          }
+        }
+      }
+      [value~=block-0] {
+        bottom: 12%;
+        left: 2%;
+        width: 47%;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        .blockContent {
+          padding-left: 23%;
+          padding-right: 22%;
+        }
+        @media only screen and (max-width: 576px) {
+          width: 100%;
+          bottom: 40%;
+          left: 17%;
+        }
+      }
+      [value~=block-1] {
+        bottom: 12%;
+        right: 2%;
+        width: 47%;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        .blockContent {
+          padding-left: 22%;
+          padding-right: 22%;
+        }
+        @media only screen and (max-width: 576px) {
+          width: 100%;
+          bottom: 20%;
+          left: 17%;
+        }
+      }
+    }
+    /*
+      slide-2
+    */
+    .slide-2 {
+      background-image: url("../images/slide-2.jpg");
+      .titleAndSubtitle {
+        padding-top: 20vh;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+      }
+      [value~=block-0] {
+        bottom: 8%;
+        left: 6%;
+        width: 27%;
+        min-height: 24vmin;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          left: 16vw;
+          width: 69vw;
+          bottom: 35vh;
+        }
+        @media only screen and (max-width: 568px) and (max-height: 320px) {
+          display: none;
+        }
+
+      }
+      [value~=block-1] {
+        bottom: 8%;
+        left: 36%;
+        width: 27%;
+        min-height: 24vmin;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          left: 16vw;
+          width: 69vw;
+          bottom: 5vh;
+        }
+      }
+      [value~=block-2] {
+        bottom: 8%;
+        left: 66%;
+        width: 27%;
+        min-height: 24vmin;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          display: none;
+        }
+      }
+    }
+
+    /*
+      slide-3
+    */
+    .slide-3 {
+      background-image: url("../images/slide-3.jpeg");
+      .titleAndSubtitle {
+        padding-top: 20vh;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+      }
+      [value~=block-0] {
+        bottom: 16vh;
+        left: 6%;
+        width: 27%;
+        min-height: 28vmin;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          left: 16vw;
+          width: 69vw;
+          bottom: 40vh;
+        }
+        @media only screen and (max-width: 568px) and (max-height: 320px) {
+          display: none;
+        }
+
+      }
+      [value~=block-1] {
+        bottom: 16vh;
+        left: 36%;
+        width: 27%;
+        min-height: 28vmin;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          left: 16vw;
+          width: 69vw;
+          bottom: 20vh;
+        }
+      }
+      [value~=block-2] {
+        bottom: 16vh;
+        left: 66%;
+        width: 27%;
+        min-height: 28vmin;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        @media only screen and (max-width: 576px) {
+          display: none;
+        }
+      }
+    }
+
+    /*
+      slide-4
+    */
+    .slide-4 {
+      background-image: url("../images/slide-4.jpeg");
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 10%;
+      .titleAndSubtitle {
+        text-align: center;
+        transition: transform 1s ease;
+        transform: translate(0,50%);
+        .subtitleBlock {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+
+    .slideCurrentEntering .titleAndSubtitle {
+      transform: translate(0,0);
+    }
+
+    .slideCurrent .titleAndSubtitle {
+      transform: translate(0,0);
+    }
+
+    //need to stay outside slide-0 to make it works
+    .slideCurrentEntering [value~=block-0],
+    .slideCurrentEntering [value~=block-1],
+    .slideCurrentEntering [value~=block-2] {
+      transform: translate(0,0);
+    }
+
+    .slideCurrent [value~=block-0],
+    .slideCurrent [value~=block-1],
+    .slideCurrent [value~=block-2] {
+      transform: translate(0,0);
+    }
+
+    .subtitleBlock {
+      color: white;
+      font-size: 3vmin;
+      padding-left: 20vw;
+      padding-right: 20vw;
+      padding-top: 2vh;
+    }
+
+    .indicators {
+      border: none;
+      outline: none;
+      float: right;
+      position: absolute;;
+      top: 40%;
+      right: 20px;
+      li {
+        width: 11px;
+        height: 11px;
+        margin: 4px;
+        padding: 8px;
+        position: relative;
+        border-radius: 100%;
+        display: block;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.6);
+        &.selected {
+          background-color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+
+    .slideCurrent .entered,
+    .slideCurrent .entering{
+      transform: translate(0,0);
+    }
+
+    .entering, .entered {
+      color: white;
+      font-size: 26px;
+      transition: transform 1.4s ease;
+      transform: translate(0,160%);
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+    .enterning {
+      float: left;
+    }
+    .entered {
+      float: right;
+    }
+    .blogLink a{
+      color: rgba(0, 0, 0, 1);
+      &.selected {
+        text-decoration: underline;
+      }
+      &:hover {
+        color: rgba(0, 0, 0, 1);
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+
+}

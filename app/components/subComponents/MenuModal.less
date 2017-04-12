@@ -1,0 +1,44 @@
+.modal-wrapper {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 320px;
+  overflow-y: scroll;
+  background-color: white;
+  z-index: 10;
+  text-align: center;
+  padding-top: 10%;
+  .fa-times {
+    padding-bottom: 10px;
+    color: rgba(0, 0, 0, 0.7);
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+      cursor: pointer;
+    }
+  }
+  &.hide {
+    -webkit-transform: translateX(-320px);
+    transform: translateX(-320px);
+    transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+    -webkit-transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+  }
+  &.show {
+    transition: background .3s ease-in-out,-webkit-transform .5s ease-in-out;
+  }
+  .menu-title {
+    font-size: 36px;
+    padding: 10px;
+    width: 300px;
+    margin: auto;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.8);
+    &.selected {
+      text-decoration: underline;
+    }
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}

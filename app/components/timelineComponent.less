@@ -1,0 +1,44 @@
+.timelineComponent {
+    //for headerMenu
+  background-color: #eaeceb;
+  .imageHeader {
+    @media only screen and (max-width: 576px) {
+      height: 240px !important;
+    }
+  }
+  .header-menu {
+    position: absolute;
+    top: 108px;
+    left: 65px;
+    color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    @media only screen and (max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+
+  .no-print {
+    font-weight: 800;
+  }
+
+  .timelineContainer {
+    padding-bottom: 160px;
+    // hack react-double-timeline
+    > div {
+      > div {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    .title {
+      text-align: left;
+      font-weight: 600;
+    }
+    .content {
+      text-align: left;
+      @media only screen and (max-width: 576px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
