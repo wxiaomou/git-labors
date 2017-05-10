@@ -21,3 +21,12 @@
 2. Npm  : 3.10.8
 
 ### Screencapture
+
+==============================
+NOTE:
+
+DO NOT UPGRADE react-slide-deck
+Due to the windows handleWheel event error,
+we changed node_modules/react-slide-deck/dist/deck.js && node_modules/react-slide-deck/src/deck.js
+in line 184(src) && 383(dist)
+if (prevWheelDelta !== undefined && Math.abs(delta) / Math.abs(prevWheelDelta) < 1) return;
