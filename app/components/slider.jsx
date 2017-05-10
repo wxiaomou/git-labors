@@ -39,7 +39,7 @@ const data = [
       "管理全链条",
       "解决方案」"
     ],
-    backgroundImg: "../images/slide-1.jpeg",
+    backgroundImg: "../images/slide-1.jpg",
     blocks: [
       {
         title: "救急解决方案",
@@ -79,7 +79,7 @@ const data = [
   },
   {
     titleArr: ["「公司动态」"],
-    backgroundImg: "../images/slide-3.jpeg",
+    backgroundImg: "../images/slide-3.jpg",
     subtitle: "这是这是这是公司动态和公开课公开课公开课",
     blocks: [
       {
@@ -101,7 +101,7 @@ const data = [
   },
   {
     titleArr: ["「加入我们」"],
-    backgroundImg: "../images/slide-4.jpeg",
+    backgroundImg: "../images/slide-4.jpg",
     subtitle: "慕贤、勉学、名实"
   },
 ];
