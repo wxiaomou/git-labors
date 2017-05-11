@@ -13,7 +13,7 @@ module.exports = {
         progress: true,
         contentBase: './app',
         host: '0.0.0.0',
-        port: process.env.PORT || 8080,
+        port: process.env.PORT || 80,
     },
     entry: {
         index: path.resolve(__dirname, 'app/index.jsx')
