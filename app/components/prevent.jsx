@@ -96,7 +96,7 @@ export default class Prevent extends React.Component {
             <div className="titleOnImage">{headerTitle}</div>
           }
           {infoDataArr && infoDataArr.length > 0 &&
-            <div className="row">
+            <div>
               {infoDataArr.map((infoData, i) => {
                 return (
                   <InfoCardRow
