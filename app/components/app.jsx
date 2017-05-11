@@ -9,6 +9,7 @@ import TimelineComponent from './timelineComponent.jsx';
 import Slider from "./slider.jsx";
 import Post from './post.jsx'
 import BlogMainPage from './blogMainPage';
+import JoinUs from './joinus.jsx';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ export default class App extends React.Component {
         <Route path="/intro/timeline" component={TimelineComponent} />
         <Route path="/solution/emergency" component={Emergency} />
         <Route path="/solution/prevent" component={Prevent} />
+        <Route path="/joinus" component={JoinUs} />
         <Route path="/blogs/:post_id" component={Post} />
         <Route path="/blogs" component={BlogMainPage} />
       </Router>

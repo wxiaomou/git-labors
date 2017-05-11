@@ -102,7 +102,8 @@ const data = [
   {
     titleArr: ["「加入我们」"],
     backgroundImg: "../images/slide-4.jpg",
-    subtitle: "慕贤、勉学、名实"
+    subtitle: "",
+    subtitleArrowUrl: "/joinus"
   },
 ];
 export default class Slider extends Component {
@@ -211,8 +212,15 @@ export default class Slider extends Component {
                        )
                       })}
                     </div>
-                    {!!d.subtitle &&
-                      <div className="subtitleBlock">{d.subtitle}</div>
+                    {(!!d.subtitle || !!d.subtitleArrowUrl) &&
+                      <div className="subtitleBlock">
+                        {d.subtitle}
+                        {!!d.subtitleArrowUrl &&
+                          <Link to={d.subtitleArrowUrl} style={{ textDecoration: 'none' }}>
+                            <span className="arrow"> 慕贤、勉学、名实 －＞</span>
+                          </Link>
+                        }
+                      </div>
                     }
                   </div>
                   {d.blocks && d.blocks.map((block, i) => {
