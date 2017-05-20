@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "babel-core": "",
-    "babel-loader": "",
+    "babel-loader": "6.4.1",
     "babel-preset-es2015": "",
     "babel-preset-latest": "",
     "babel-preset-react": "",

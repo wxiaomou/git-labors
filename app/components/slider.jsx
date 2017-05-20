@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Deck from 'react-slide-deck';
 import { Link } from 'react-router';
+import ButtomBanner from './subComponents/buttomBanner.jsx';
 import SliderTitle from './subComponents/sliderTitle.jsx';
 import SliderBlock from './subComponents/sliderBlock.jsx';
 import MenuModal from './subComponents/MenuModal.jsx';
@@ -237,7 +238,7 @@ export default class Slider extends Component {
                         titleOnly={block.titleOnly}
                       />
                     )
-                  })}
+                  })}                  
                 </Deck.Slide>
               )
             })}
@@ -262,7 +263,10 @@ export default class Slider extends Component {
             <li className={`menu-title menu-title-4 ${this.state.current === 4 ? 'selected' : ''}`}>加入我们</li>
           </div>
           <Link to={'/blogs'} style={{ textDecoration: 'none' }}><li className="blogLink menu-title">Blog</li></Link>
-        </MenuModal>
+        </MenuModal>       
+        {this.state.current === 4 &&
+          <ButtomBanner/>
+        }
       </div>
     );
   }
