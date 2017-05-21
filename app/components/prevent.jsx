@@ -4,7 +4,8 @@ import ImageHeader from './subComponents/imageHeader.jsx';
 import NavFrame from './NavFrame';
 import InfoCardRow from './subComponents/infoCardRow.jsx';
 import TextUnderHeaderImageRow from './subComponents/textUnderHeaderImageRow.jsx';
-import './strategy.less';
+import Footer from './subComponents/Footer.jsx';
+import './prevent.less';
 
 const preventData = {
   title: "解决方案",
@@ -100,7 +101,7 @@ export default class Prevent extends React.Component {
             <div className="titleOnImage">{headerTitle}</div>
           }
           {infoDataArr && infoDataArr.length > 0 &&
-            <div>
+            <div className="card-container">
               {infoDataArr.map((infoData, i) => {
                 return (
                   <InfoCardRow
@@ -113,6 +114,7 @@ export default class Prevent extends React.Component {
               })}
             </div>
           }
+          <Footer currentUrl='solution'/>
         </NavFrame>
       </div>
     );

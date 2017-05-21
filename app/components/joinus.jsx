@@ -5,6 +5,7 @@ import ImageHeader from './subComponents/imageHeader.jsx';
 import InfoCard from './subComponents/infoCard.jsx';
 import NavFrame from './NavFrame';
 import WhiteIcon from './subComponents/whiteIcon.jsx';
+import Footer from './subComponents/Footer.jsx';
 import './joinus.less';
 
 
@@ -107,6 +108,7 @@ export default class Brief extends React.Component {
           <div className="row-div">
             <p>有关赉擘斯职业机会的信息，请与我们联络，发邮件至: hr@laibei.com.</p>
           </div>
+          <Footer currentUrl='joinus'/>
         </NavFrame>
       </div>
     );

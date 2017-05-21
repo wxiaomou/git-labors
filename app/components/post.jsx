@@ -1,6 +1,7 @@
 import React from 'react';
 import Parser from 'html-react-parser';
 import HeaderMenu from './subComponents/headerMenu.jsx';
+import Footer from './subComponents/Footer.jsx';
 import './post.less'
 
 const postData = {
@@ -77,6 +78,7 @@ export default class Post extends React.Component {
             return this.getElement(element, i);
           })}
         </div>
+        <Footer />
       </div>
     )
   }

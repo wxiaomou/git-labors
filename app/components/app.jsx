@@ -23,6 +23,7 @@ export default class App extends React.Component {
         <Route path="/intro/brief" component={Brief} />
         <Route path="/intro/strategy" component={Strategy} />
         <Route path="/intro/timeline" component={TimelineComponent} />
+        <Route path="/solution" component={Emergency} />
         <Route path="/solution/emergency" component={Emergency} />
         <Route path="/solution/prevent" component={Prevent} />
         <Route path="/joinus" component={JoinUs} />

@@ -1,0 +1,44 @@
+.footer {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  .footer-content {
+    //overwrite white-icon css
+    padding-left: 5%;
+    padding-right: 5%;
+    .white-icon {
+      position: relative;
+    }
+    .wechat-card {
+      padding-top: 10px;
+      height: 80px;
+      float: right;
+      @media only screen and (max-width: 576px){
+        display: none;
+      }
+    }
+    .sitemap {
+      padding-top: 30px;
+      padding-left: 30px;
+      .footer-link {
+        font-size: 14px;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        &.selected {
+          color: white;
+          text-decoration: underline;
+        }
+        &:hover {
+          color: white;
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+    
+}

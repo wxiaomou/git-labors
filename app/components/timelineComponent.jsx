@@ -5,9 +5,9 @@ import HeaderMenu from './subComponents/headerMenu.jsx';
 import ImageHeader from './subComponents/imageHeader.jsx';
 import NavFrame from './NavFrame';
 import WhiteIcon from './subComponents/whiteIcon.jsx';
+import Footer from './subComponents/Footer.jsx';
 import './timelineComponent.less';
 
-import './timelessComponent.less';
 const blackIconNoTitle="../images/logo-black.png";
 
 const timelineData = {
@@ -193,6 +193,7 @@ export default class TimelineComponent extends React.Component {
               </Timeline>
             </StyleRoot>
           </div>
+          <Footer currentUrl='timeline'/>
         </NavFrame>
       </div>
     );

@@ -5,6 +5,7 @@ import InfoCard from './subComponents/infoCard.jsx';
 import TextUnderHeaderImageRow from './subComponents/textUnderHeaderImageRow.jsx';
 import NavFrame from './NavFrame';
 import WhiteIcon from './subComponents/whiteIcon.jsx';
+import Footer from './subComponents/Footer.jsx';
 import './brief.less';
 
 
@@ -96,6 +97,7 @@ export default class Brief extends React.Component {
               <div>运用人力资源科学的理念、工具和方法，对接中国劳动法律的要求，融合中国社会人文文化，通过沟通落地解决方案，创造和谐劳动关系环境，保障企业战略目标的实现以及员工满意度的提升。</div>
             </div>
           </div>
+          <Footer currentUrl='brief'/>
         </NavFrame>
       </div>
     );

@@ -58,21 +58,21 @@ const data = [
   {
     titleArr: ["「洞察与方法」"],
     backgroundImg: "../images/slide-2.jpg",
-    subtitle: "通过大量实践积累，我们不断总结和提出创新的观点。\n这些大胆的、独一无二的观点，让我们在研究企业战略劳动关系管理解决方案的道路上成就卓越，并始终保持领先。",
+    subtitle: "通过大量实践积累，我们不断总结和提出创新的观点。这些大胆的、独一无二的观点，让我们在研究企业战略劳动关系管理解决方案的道路上成就卓越，并始终保持领先。",
     blocks: [
       {
-        title: "最新文章 1",
-        content: "这是一最新文章4的描述 这是一最新文章1的描述 这是一最新文章1的描述",
+        title: "",
+        content: "",
         titlePosition: "inside",
       },
       {
-        title: "最新文章 2",
-        content: "这是一最新文章2的描述 这是一最新文章2的描述 这是一最新文章2的描述",
+        title: "",
+        content: "",
         titlePosition: "inside",
       },
       {
-        title: "最新文章 3",
-        content: "这是一最新文章3的描述 这是一最新文章3的描述 这是一最新文章3的描述",
+        title: "",
+        content: "",
         titlePosition: "inside",
       },
     ]
@@ -130,6 +130,7 @@ export default class Slider extends Component {
   componentDidMount() {
     // 洞察与方法
     const ids_for_dcyff = [421, 586, 803];
+    var that = this;
     ids_for_dcyff.map((id, i) => {
       const urlForEach = `https://public-api.wordpress.com/rest/v1.2/read/sites/laibosi.wordpress.com/posts/${id}`;
       $.get(urlForEach).done(function(post) {
@@ -137,10 +138,10 @@ export default class Slider extends Component {
         data[2].blocks[i].content = getSnippet(post.content.replace(/[\uE000-\uF8FF]/g, ''), 60),
         data[2].blocks[i].titlePosition = "inside";
         data[2].blocks[i].href = `/blogs/${post.ID}`;
-      })
-      this.setState({
-        data: data,
-      })
+        that.setState({
+          data: data,
+        });
+      });
     })
     // 公司动态
     // ordered by 公司动态, 公开课, 项目案例
@@ -150,10 +151,10 @@ export default class Slider extends Component {
       $.get(urlForEach).done(function(post) {
         data[3].blocks[i].content = post.title.replace(/[\uE000-\uF8FF]/g, '');
         data[3].blocks[i].href = `/blogs/${post.ID}`;
-      })
-      this.setState({
-        data: data,
-      })
+        that.setState({
+          data: data,
+        });
+      });
     })
   }
 
@@ -188,7 +189,7 @@ export default class Slider extends Component {
       leaving: 'slidePrevLeaving'
     };
     if (!data) {
-      return (<div>wait</div>);
+      return (<div></div>);
     }
     const menuOpenClass = this.state.openMenuModal ? "menuOpenClass" : "";
     return (

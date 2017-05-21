@@ -4,6 +4,7 @@ import ImageHeader from './subComponents/imageHeader.jsx';
 import InfoCard from './subComponents/infoCard.jsx';
 import NavFrame from './NavFrame';
 import TextUnderHeaderImageRow from './subComponents/textUnderHeaderImageRow.jsx';
+import Footer from './subComponents/Footer.jsx';
 import './strategy.less';
 
 const strategyData = {
@@ -122,6 +123,7 @@ export default class Strategy extends React.Component {
               })}
             </div>
           }
+          <Footer />
         </NavFrame>
       </div>
     );
