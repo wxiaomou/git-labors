@@ -30,7 +30,7 @@ export default class SliderBlock extends React.Component {
         })}
       </div>
     );
-    const blockColSize = blockSize == 6 ? "col-sm-6" : "col-sm-4"
+    const blockColSize = blockSize == 6 ? "col-sm-6" : "col-lg-3 col-sm-5"
     return (
       <div value={`block-${index}`} className={`sliderBlock block col-8 ${blockColSize}`}>
         <Link to={href}>

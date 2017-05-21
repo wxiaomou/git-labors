@@ -34,9 +34,8 @@ const data = [
   },
   {
     titleArr: [
-      "「战略劳动关系",
-      "管理全链条",
-      "解决方案」"
+      "「战略劳动关系管理",
+      "全链条解决方案」"
     ],
     backgroundImg: "../images/slide-1.jpg",
     blocks: [
@@ -81,7 +80,6 @@ const data = [
   {
     titleArr: ["「公司动态」"],
     backgroundImg: "../images/slide-3.jpg",
-    subtitle: "这是这是这是公司动态和公开课公开课公开课",
     blocks: [
       {
         title: "「公司动态」",
@@ -149,6 +147,7 @@ export default class Slider extends Component {
       });
       that.state.data[2].blocks = newPosts;
     })
+    // 
     // 公司动态
     // ordered by 公司动态, 公开课, 项目案例
     const ids = [1715, 1769, 1816];
