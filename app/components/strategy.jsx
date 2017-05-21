@@ -22,10 +22,10 @@ const strategyData = {
       name: "理念",
       path: "/intro/strategy"
     },
-    {
-      name: "成员",
-      path: ""
-    }
+    // {
+    //   name: "成员",
+    //   path: ""
+    // }
   ],
   currentIndex: 2,
   headerImage: "../images/intro/strategy/header-image.jpeg",
@@ -36,13 +36,8 @@ const strategyData = {
   ],
   infoDataArr: [
     {
-      title: "经验",
-      content: "二十年来，赉擘斯为近千家企业战略目标的实现提供人力资源解决方案，涉及行业从传统制造业到高科技互联网行业，与行业内的龙头企业建立了长久的合作关系。",
-      imageUrl: "../images/intro/strategy/infoCards/experience.jpg"
-    },
-    {
-      title: "沟通",
-      content: "在战略人力资源管理中，沟通是一切管理目标落地的核心环节。赉擘斯拥有充分的协调企业各部门沟通、与政府沟通、与员工沟通和与传媒或自媒体沟通的经验，帮助企业平稳高效的快速实现目标。",
+      title: "观点",
+      content: "通过大量实践积累，我们不断总结和提出创新的观点。这些大胆的、独一无二的观点，让我们在研究企业战略劳动关系管理解决方案的道路上成就卓越，并始终保持领先。",
       imageUrl: "../images/intro/strategy/infoCards/communication.jpg"
     },
     {
@@ -54,6 +49,11 @@ const strategyData = {
       title: "我们的团队",
       content: "我们率先提出通过三类型专家团队帮助企业的战略人力资源管理。我们的顾问均是各个领域的佼佼者。劳动关系管理专家，人力资源管理专家，劳动法律专业律师三类型专家形成合力，保障我们的产品和咨询方案具备全局观和立体思维，并能有效执行，充分应对战略劳动关系管理领域的广泛性和综合性，避免片面和偏颇。",
       imageUrl: "../images/intro/strategy/infoCards/team.jpg"
+    },
+    {
+      title: "经验",
+      content: "二十年来，赉擘斯为近千家企业战略目标的实现提供人力资源解决方案，涉及行业从传统制造业到高科技互联网行业，与行业内的龙头企业建立了长久的合作关系。",
+      imageUrl: "../images/intro/strategy/infoCards/experience.jpg"
     },
   ]
 }

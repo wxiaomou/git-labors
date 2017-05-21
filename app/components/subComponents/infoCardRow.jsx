@@ -20,8 +20,12 @@ export default class InfoCardRow extends React.Component {
             <img className="image-card" src={imageUrl} />
           </div>
           <div className="caption col-md-7 col-sm-12">
-            <h3 className="title">{title}</h3>
-            <p className="content">{content}</p>
+            <h4 className="title">{title}</h4>
+            {content && content.map((text, i) => {
+              return (
+                <div className="content">{text}</div>
+              )
+            })}
           </div>
         </div>
       </div>

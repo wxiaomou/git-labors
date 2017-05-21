@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import './sliderBlock.less';
 
-const whiteIconNoTitle="../images/logo-white.png";
 
 export default class SliderBlock extends React.Component {
   constructor(props) {
@@ -22,7 +21,6 @@ export default class SliderBlock extends React.Component {
       titleOnly,
     } = this.props;
     const isTitleInside = titlePosition == "inside" ? true : false;
-    // const isTitleOnly = titleOnly == "true" ? true : false;
     const getHeaderArrDivs = (
       <div className="blockHeaders">
         {headerArr && headerArr.map((header, i) => {
@@ -44,7 +42,6 @@ export default class SliderBlock extends React.Component {
           }
           {titleOnly &&
             <div className="blockInsideTitleAndTitleOnly">
-              <img className="titleIcon" src={whiteIconNoTitle}></img>
               {title}
             </div>
           }

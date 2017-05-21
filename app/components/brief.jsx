@@ -23,10 +23,10 @@ const briefData = {
       name: "理念",
       path: "/intro/strategy"
     },
-    {
-      name: "成员",
-      path: ""
-    }
+    // {
+    //   name: "成员",
+    //   path: ""
+    // }
   ],
   currentIndex: 0,
   headerImage: "../images/intro/strategy/header-image.jpeg",

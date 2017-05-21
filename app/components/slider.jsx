@@ -12,9 +12,7 @@ import './slider.less';
 const data = [
   {
     titleArr: [
-      "「中国\n",
-      "战略劳动关系",
-      "管理专家」"
+      "「中国战略劳动关系管理专家」"
     ],
     backgroundImg: "../images/slide-0.jpg",
     blocks: [
@@ -46,20 +44,22 @@ const data = [
         title: "救急解决方案",
         titlePosition: "inside",
         titleOnly: true,
-        href: "/solution/emergency"
+        href: "/solution/emergency",
+        blockSize: 6,
       },
       {
         title: "预防解决方案",
         titlePosition: "inside",
         titleOnly: true,
-        href: "/solution/prevent"
+        href: "/solution/prevent",
+        blockSize: 6,
       },
     ]
   },
   {
     titleArr: ["「洞察与方法」"],
     backgroundImg: "../images/slide-2.jpg",
-    subtitle: "我们领先的、独一无二的观点与方法，让我们在研究企业战略劳动关系管理解决方案的道路上成就卓越并始终保持领先",
+    subtitle: "通过大量实践积累，我们不断总结和提出创新的观点。\n这些大胆的、独一无二的观点，让我们在研究企业战略劳动关系管理解决方案的道路上成就卓越，并始终保持领先。",
     blocks: [
       {
         title: "最新文章 1",
@@ -149,6 +149,18 @@ export default class Slider extends Component {
       });
       that.state.data[2].blocks = newPosts;
     })
+    // 公司动态
+    // ordered by 公司动态, 公开课, 项目案例
+    const ids = [1715, 1769, 1816];
+    ids.map((id, i) => {
+      const urlForEach = `https://public-api.wordpress.com/rest/v1.2/read/sites/laibosi.wordpress.com/posts/${id}`;
+      $.get(urlForEach).done(function(post) {
+        that.state.data[3].blocks[i].content = post.title.replace(/[\uE000-\uF8FF]/g, '');
+        that.state.data[3].blocks[i].href = `/blogs/${post.ID}`;
+      })
+    })
+    
+
   }
 
   change({ target }) {
