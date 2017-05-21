@@ -70,6 +70,32 @@ export default class Brief extends React.Component {
               introTextArr = {introTextArr}
             />
           }
+          <div className="row">
+            <div className="offset-md-1 col-md-5">
+              <img className="image-card" src="../images/joinus/1.jpg" />
+            </div>
+            <div className="col-md-5">
+              <div className="category">
+                <h5>愿景</h5>
+                <div>做中国领先的战略劳动关系管理专家</div>
+              </div>
+              <div className="category">
+                <h5>使命</h5>
+                <div>企业目标实现，员工满意认可</div>
+              </div>
+              <div className="category">
+                <h5>价值观</h5>
+                <div>做事先做人，品格更重要</div>
+                <div>诚信加专业，智慧创价值</div>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="category offset-md-1 col-md-10">
+              <h5>方法</h5>
+              <div>运用人力资源科学的理念、工具和方法，对接中国劳动法律的要求，融合中国社会人文文化，通过沟通落地解决方案，创造和谐劳动关系环境，保障企业战略目标的实现以及员工满意度的提升。</div>
+            </div>
+          </div>
         </NavFrame>
       </div>
     );
