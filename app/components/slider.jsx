@@ -128,38 +128,33 @@ export default class Slider extends Component {
     }
   }
   componentDidMount() {
-    this.setState({
-      data: data,
+    // 洞察与方法
+    const ids_for_dcyff = [421, 586, 803];
+    ids_for_dcyff.map((id, i) => {
+      const urlForEach = `https://public-api.wordpress.com/rest/v1.2/read/sites/laibosi.wordpress.com/posts/${id}`;
+      $.get(urlForEach).done(function(post) {
+        data[2].blocks[i].title = post.title.replace(/[\uE000-\uF8FF]/g, '');
+        data[2].blocks[i].content = getSnippet(post.content.replace(/[\uE000-\uF8FF]/g, ''), 60),
+        data[2].blocks[i].titlePosition = "inside";
+        data[2].blocks[i].href = `/blogs/${post.ID}`;
+      })
+      this.setState({
+        data: data,
+      })
     })
-    const url = `https://public-api.wordpress.com/rest/v1.2/read/sites/laibosi.wordpress.com/posts?number=3&&order_by=date`;
-    const that = this;
-    $.get(url).done(function(data) {
-      const posts = data.posts;
-      let newPosts = [];
-      posts.map((post, i) => {
-        let newPost = {
-          title: post.title.replace(/[\uE000-\uF8FF]/g, ''),
-          content: getSnippet(post.content.replace(/[\uE000-\uF8FF]/g, ''), 60),
-          titlePosition: "inside",
-          href: `/blogs/${post.ID}`,
-        }
-        newPosts.push(newPost);
-      });
-      that.state.data[2].blocks = newPosts;
-    })
-    // 
     // 公司动态
     // ordered by 公司动态, 公开课, 项目案例
     const ids = [1715, 1769, 1816];
     ids.map((id, i) => {
       const urlForEach = `https://public-api.wordpress.com/rest/v1.2/read/sites/laibosi.wordpress.com/posts/${id}`;
       $.get(urlForEach).done(function(post) {
-        that.state.data[3].blocks[i].content = post.title.replace(/[\uE000-\uF8FF]/g, '');
-        that.state.data[3].blocks[i].href = `/blogs/${post.ID}`;
+        data[3].blocks[i].content = post.title.replace(/[\uE000-\uF8FF]/g, '');
+        data[3].blocks[i].href = `/blogs/${post.ID}`;
+      })
+      this.setState({
+        data: data,
       })
     })
-    
-
   }
 
   change({ target }) {
