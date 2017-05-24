@@ -50,6 +50,9 @@ export default class NavFrame extends React.Component {
             <Link className="menu-title-link" to={{ pathname: '/', state: {currentIndex: 4} }} style={{ textDecoration: 'none' }}>
               <li className={`menu-title menu-title-4 ${currentIndex === 4 ? 'selected' : ''}`}>加入我们</li>
             </Link>
+            <Link  className="menu-title-link" to={'/contactus'} style={{ textDecoration: 'none' }}>
+              <li className={`menu-title menu-title-5 ${currentIndex === 5 ? 'selected' : ''}`}>联络我们</li>
+            </Link>
             <Link  className="menu-title-link" to={'/blogs'} style={{ textDecoration: 'none' }}>
               <li className="blogLink menu-title">Blog</li>
             </Link>

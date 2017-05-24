@@ -31,7 +31,7 @@ export default class Brief extends React.Component {
     return (
       <div className="joinus">
         <NavFrame
-          currentIndex={5}
+          currentIndex={4}
         >
           <ImageHeader
             imageUrl={headerImage}

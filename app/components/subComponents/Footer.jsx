@@ -22,6 +22,7 @@ export default class Footer extends React.Component {
             <Link to={'/intro/timeline'} className={`footer-link ${currentUrl === 'timeline' ? 'selected' : ''}`}>成长历程</Link>
             <Link to={'/solution'} className={`footer-link ${currentUrl === 'solution' ? 'selected' : ''}`}>解决方案</Link>
             <Link to={'/joinus'} className={`footer-link ${currentUrl === 'joinus' ? 'selected' : ''}`}>加入我们</Link>
+            <Link to={'/joinus'} className={`footer-link ${currentUrl === 'contactus' ? 'selected' : ''}`}>联络我们</Link>
             <Link to={'/blogs'} className={`footer-link ${currentUrl === 'blogs' ? 'selected' : ''}`}>博客</Link>
           </div>
           <div className="col-md-3">

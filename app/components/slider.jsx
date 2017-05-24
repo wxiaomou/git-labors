@@ -269,6 +269,7 @@ export default class Slider extends Component {
             <li className={`menu-title menu-title-3 ${this.state.current === 3 ? 'selected' : ''}`}>公司动态</li>
             <li className={`menu-title menu-title-4 ${this.state.current === 4 ? 'selected' : ''}`}>加入我们</li>
           </div>
+          <Link to={'/contactus'} style={{ textDecoration: 'none' }}><li className="blogLink menu-title">联络我们</li></Link>
           <Link to={'/blogs'} style={{ textDecoration: 'none' }}><li className="blogLink menu-title">Blog</li></Link>
         </MenuModal>       
         {this.state.current === 4 &&
