@@ -17,6 +17,19 @@ const briefData = {
 }
 export default class ContactUs extends React.Component {
 
+  componentDidMount() {
+    setTimeout(function() {
+      this._map = new BMap.Map('map');
+      this._map.centerAndZoom(new BMap.Point(116.37749, 39.9747), 15);
+      this._map.addControl(new BMap.NavigationControl());
+      this._map.addControl(new BMap.ScaleControl());
+      this._map.addControl(new BMap.OverviewMapControl());
+      this._map.addControl(new BMap.MapTypeControl());
+      const marker = new BMap.Marker(new BMap.Point(116.37749, 39.9747));        // 创建标注
+      this._map.addOverlay(marker); 
+    },1500);
+  }
+
   render() {
     const {
       title,
@@ -40,20 +53,18 @@ export default class ContactUs extends React.Component {
             <h4 className="row-padding">
               感谢您与我们联系！
             </h4>
-          </div>
-          <div className="row-div">
             <div className="row row-padding">
-              <div className="col-sm-6 why-div">
+              <div className="col-sm-12 why-div">
                 <h6>如您希望垂询我们的业务情况，请您联系</h6>
                 <h6>wangruifeng@laibei.com</h6>
               </div>
-              <div className="col-sm-6 why-div">
+            </div>
+            <div className="row row-padding">
+              <div className="col-sm-12 why-div">
                 <h6>如您希望寻求合作，请您联系</h6>
                 <h6>liutong@laibei.com</h6>
               </div>
             </div>
-          </div>
-          <div className="row-div">
             <div className="row row-padding">
               <div className="col-sm-12 why-div">
                 <h6>公司地址：北京市海淀区北太平庄路18号城建大厦A座630室</h6>
@@ -61,6 +72,7 @@ export default class ContactUs extends React.Component {
               </div>
             </div>
           </div>
+          <div className="col-sm-12 row-padding" id="map"></div>
           <Footer currentUrl='contactus'/>
         </NavFrame>
       </div>
